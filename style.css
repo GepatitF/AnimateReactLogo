@@ -1,0 +1,151 @@
+body {
+  background-color: #212121;
+}
+
+.react {
+  width: 300px;
+  height: 300px;
+  margin: 50px auto;
+  position: relative;
+}
+
+.react::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #00d3f8;
+  border-radius: 50%;
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 50%, 0);
+          transform: translate3d(-50%, 50%, 0);
+  -webkit-animation: reactCircle 500ms ease-in-out backwards;
+          animation: reactCircle 500ms ease-in-out backwards;
+}
+
+.react-elipse {
+  width: 90%;
+  height: 110px;
+  border: 8px solid #00d3f8;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.center {
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  -webkit-animation: reactElipseCenter 500ms ease-in-out backwards 500ms;
+          animation: reactElipseCenter 500ms ease-in-out backwards 500ms;
+}
+
+.left {
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(60deg);
+          transform: translate3d(-50%, -50%, 0) rotate(60deg);
+  -webkit-animation: reactElipseLeft 500ms ease-in-out backwards 500ms;
+          animation: reactElipseLeft 500ms ease-in-out backwards 500ms;
+}
+
+.right {
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(-60deg);
+          transform: translate3d(-50%, -50%, 0) rotate(-60deg);
+  -webkit-animation: reactElipseRight 500ms ease-in-out backwards 500ms;
+          animation: reactElipseRight 500ms ease-in-out backwards 500ms;
+}
+
+@-webkit-keyframes reactCircle {
+  from {
+    -webkit-transform: translate3d(-50%, 50%, 0) scale(0);
+            transform: translate3d(-50%, 50%, 0) scale(0);
+  }
+  to {
+    -webkit-transform: translate3d(-50%, 50%, 0) scale(1);
+            transform: translate3d(-50%, 50%, 0) scale(1);
+  }
+}
+
+@keyframes reactCircle {
+  from {
+    -webkit-transform: translate3d(-50%, 50%, 0) scale(0);
+            transform: translate3d(-50%, 50%, 0) scale(0);
+  }
+  to {
+    -webkit-transform: translate3d(-50%, 50%, 0) scale(1);
+            transform: translate3d(-50%, 50%, 0) scale(1);
+  }
+}
+@-webkit-keyframes reactElipseCenter {
+  from {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotateX(90deg);
+            transform: translate3d(-50%, -50%, 0) rotateX(90deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotateX(0deg);
+            transform: translate3d(-50%, -50%, 0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+@keyframes reactElipseCenter {
+  from {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotateX(90deg);
+            transform: translate3d(-50%, -50%, 0) rotateX(90deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotateX(0deg);
+            transform: translate3d(-50%, -50%, 0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes reactElipseLeft {
+  from {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+            transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(60deg);
+            transform: translate3d(-50%, -50%, 0) rotate(60deg);
+    opacity: 1;
+  }
+}
+@keyframes reactElipseLeft {
+  from {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+            transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(60deg);
+            transform: translate3d(-50%, -50%, 0) rotate(60deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes reactElipseRight {
+  from {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+            transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(-60deg);
+            transform: translate3d(-50%, -50%, 0) rotate(-60deg);
+    opacity: 1;
+  }
+}
+@keyframes reactElipseRight {
+  from {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+            transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(-60deg);
+            transform: translate3d(-50%, -50%, 0) rotate(-60deg);
+    opacity: 1;
+  }
+}
